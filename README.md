@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# MSCHUTZNER BITWISE REACT FINAL
 
 This a basic E-commerce application using the [Fake Store API](https://fakestoreapi.com/) to retrieve product data.
 
