@@ -11,23 +11,26 @@ import Products from './components/Products';
 import Home from './components/Home';
 import ProductPage from './components/ProductPage';
 import About from './components/About';
+import { CartProvider } from './contexts/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home/>} />
-          <Route path="about" element={<About />} />
-          <Route path="products" element={<Products/>} />
-          <Route path="products/:id" element={<ProductPage />} />
-          <Route path="cart" element={<Cart/>} />
-          <Route path="checkout" element={<Checkout/>} />
-          <Route path="*" element={<NotFound/>} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home/>} />
+            <Route path="about" element={<About />} />
+            <Route path="products" element={<Products/>} />
+            <Route path="products/:id" element={<ProductPage />} />
+            <Route path="cart" element={<Cart/>} />
+            <Route path="checkout" element={<Checkout/>} />
+            <Route path="*" element={<NotFound/>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   </React.StrictMode>
 );
 

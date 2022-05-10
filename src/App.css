@@ -208,3 +208,66 @@ body,html, #root, .App, .content-wrapper{
   font-weight:bold;
   cursor: pointer;
 }
+
+.cart-wrapper{
+  flex-grow:1;
+  background:white;
+  padding:0 2em;
+}
+.cart-item{
+  display:flex;
+  flex-direction: row;
+  margin: 2em 0;
+  align-items: center;
+}
+.cart-image-wrapper{
+  width:150px;
+  height:150px;
+  flex-shrink: 0;
+}
+.cart-image{
+  max-width:100%;
+  max-height:100%;
+}
+.cart-title{
+  width:300px;
+}
+.cart-filler{
+  flex-grow:1;
+}
+.cart-price{
+  font-size:1.5em;
+  color:#333;
+  font-weight:bold;
+}
+.cart-count{
+  font-size:1.25em;
+  width:100%;
+  max-width:40px;
+  outline:1px solid #222;
+  border:none;
+  padding:0.5em;
+  border-radius:0.25em;
+  margin:0 1em;
+}
+.cart-remove{
+  font-size:2em;
+  color:#333;
+}
+.cart-bottom{
+  display:flex;
+}
+.cart-bottom-filler{
+  flex-grow:1;
+}
+.cart-checkout-button{
+  color:black;
+  text-decoration: none;
+  font-size:1.25em;
+  padding:0.5em;
+  background-color:goldenrod;
+  border:2px solid rgb(150, 107, 8);
+  border-radius:0.5em;
+  outline:none;
+  font-weight:bold;
+}

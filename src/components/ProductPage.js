@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate  } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner, faStar, faStarHalfStroke} from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../contexts/CartContext";
 
 export default function ProductPage(){    const [products, setProducts] = useState([]);
     let params = useParams();
     let navigate = useNavigate();
+
+    const { cart, setCart } = useContext(CartContext);
 
     const [product, setProduct] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -25,7 +28,25 @@ export default function ProductPage(){    const [products, setProducts] = useSta
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        navigate("/cart");
+        if(product){
+            let inCart = false;
+            cart.map((item) => {
+                if(item.id == product.id){
+                    inCart = true;
+                    item.count += count;
+                }
+            })
+            if(!inCart){
+                cart.push({
+                    id: product.id,
+                    count,
+                    image: product.image,
+                    title: product.title,
+                    price: product.price
+                });
+            }
+            navigate("/cart");
+        }
     };
 
     if(isLoading){
@@ -61,8 +82,8 @@ export default function ProductPage(){    const [products, setProducts] = useSta
                     <form className="product-page-form" onSubmit={handleSubmit}>
                         <div className="product-page-filler"></div>
                         <div className="product-page-price">${product.price}</div>
-                        <input type="number" className="product-page-count" value={count} min="1" onChange={(e) => setCount(e.target.value)}/>
-                        <button type="submit" className="product-page-submit">ADD TO CART</button>
+                        <input type="number" className="product-page-count" value={count} min="1" onChange={(e) => setCount(parseInt(e.target.value))}/>
+                        <button className="product-page-submit">ADD TO CART</button>
                     </form>
                 </div>
             </div>
