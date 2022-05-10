@@ -212,7 +212,18 @@ body,html, #root, .App, .content-wrapper{
 .cart-wrapper{
   flex-grow:1;
   background:white;
-  padding:0 2em;
+  padding:2em;
+}
+.cart-header{
+  margin: 0;
+  text-align: center;
+  font-size:2em;
+  color:#333;
+  font-weight:bold;
+}
+.cart-empty-text{
+  text-align:center;
+  margin: 2em 0;
 }
 .cart-item{
   display:flex;
@@ -224,23 +235,26 @@ body,html, #root, .App, .content-wrapper{
   width:150px;
   height:150px;
   flex-shrink: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
-.cart-image{
+.cart-item-image{
   max-width:100%;
   max-height:100%;
 }
-.cart-title{
+.cart-item-title{
   width:300px;
 }
-.cart-filler{
+.cart-item-filler{
   flex-grow:1;
 }
-.cart-price{
+.cart-item-price{
   font-size:1.5em;
   color:#333;
   font-weight:bold;
 }
-.cart-count{
+.cart-item-count{
   font-size:1.25em;
   width:100%;
   max-width:40px;
@@ -250,15 +264,22 @@ body,html, #root, .App, .content-wrapper{
   border-radius:0.25em;
   margin:0 1em;
 }
-.cart-remove{
+.cart-item-remove{
   font-size:2em;
   color:#333;
 }
 .cart-bottom{
   display:flex;
+  align-items: center;
 }
 .cart-bottom-filler{
   flex-grow:1;
+}
+.cart-subtotal{
+  font-size:1.5em;
+  color:#333;
+  font-weight:bold;
+  margin-right:0.5em;
 }
 .cart-checkout-button{
   color:black;
@@ -270,4 +291,70 @@ body,html, #root, .App, .content-wrapper{
   border-radius:0.5em;
   outline:none;
   font-weight:bold;
+}
+
+
+
+
+.checkout-wrapper{
+  flex-grow:1;
+  background:white;
+  padding:2em;
+}
+.checkout-header{
+  margin: 0;
+  text-align: center;
+  font-size:2em;
+  color:#333;
+  font-weight:bold;
+}
+.checkout-empty-text{
+  text-align:center;
+  margin: 2em 0;
+}
+.checkout-item{
+  display:flex;
+  flex-direction: row;
+  margin: 2em 0;
+  align-items: center;
+  min-width: 0;
+}
+.checkout-item-title{
+  font-size:1.2em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0;
+}
+.checkout-item-filler{
+  flex-grow: 1;
+}
+.checkout-item-count{
+  min-width:40px;
+  text-align:center;
+  font-size:1.5em;
+  padding:0.25em;
+  margin: 0 0.5em;
+  border-radius: 0.2em;
+  border: 1px solid black;
+}
+.checkout-item-price{
+  font-size:1.5em;
+  color:#333;
+  font-weight:bold;
+  text-align:right;
+  min-width:80px;
+}
+.checkout-bottom{
+  display:flex;
+  align-items: center;
+}
+.checkout-bottom-filler{
+  flex-grow:1;
+}
+.checkout-subtotal{
+  font-size:1.5em;
+  color:#333;
+  font-weight:bold;
+  margin-right:0.5em;
 }

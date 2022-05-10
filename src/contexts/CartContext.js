@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const CartContext = createContext("light");
 
 const CartProvider = (props) => {
-  const [cart, setCart] = useState([]);
+  const [ cart, setCart ] = useState([]);
 
   return (
     <CartContext.Provider value={{ cart, setCart }}>

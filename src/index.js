@@ -12,6 +12,7 @@ import Home from './components/Home';
 import ProductPage from './components/ProductPage';
 import About from './components/About';
 import { CartProvider } from './contexts/CartContext';
+import Success from './components/success';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +27,7 @@ root.render(
             <Route path="products/:id" element={<ProductPage />} />
             <Route path="cart" element={<Cart/>} />
             <Route path="checkout" element={<Checkout/>} />
+            <Route path="success" element={<Success />} />
             <Route path="*" element={<NotFound/>} />
           </Route>
         </Routes>
