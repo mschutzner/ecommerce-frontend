@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
+import { useNavigate  } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter, faYoutube, faInstagram, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 export default function HeaderFooter({children}){
+    let navigate = useNavigate();
+
     const [searchTerm, setSearchTerm] = useState("");
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("SearchTerm: ", searchTerm);
+        if (searchTerm.length === 0) return;
+        navigate(`/search/${searchTerm}`);
     };
 
     return (

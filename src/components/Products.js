@@ -30,9 +30,7 @@ export default function Products(){
         if(products) return (
             <>
                 {products.map((product) => (
-                    <Link to={`/products/${product.id}`} className="product-link">
-                        <ProductCard product={product} />
-                    </Link>
+                    <ProductCard product={product} />
                 ))}
             </>
         );

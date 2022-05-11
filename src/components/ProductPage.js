@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner, faStar, faStarHalfStroke} from "@fortawesome/free-solid-svg-icons";
 import { CartContext } from "../contexts/CartContext";
 
-export default function ProductPage(){    const [products, setProducts] = useState([]);
+export default function ProductPage(){
     let params = useParams();
     let navigate = useNavigate();
 
