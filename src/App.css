@@ -119,6 +119,8 @@ body,html, #root, .App, .content-wrapper{
   flex-grow:1;
 }
 
+
+
 .about-wrapper{
   flex-grow:1;
   background:white;
@@ -130,6 +132,9 @@ body,html, #root, .App, .content-wrapper{
 .about-text{
   text-indent: 3em;
 }
+
+
+
 
 .product-page-wrapper{
   display:flex;
@@ -357,4 +362,73 @@ body,html, #root, .App, .content-wrapper{
   color:#333;
   font-weight:bold;
   margin-right:0.5em;
+}
+.checkout-form{
+  width:520px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checkout-form-text-wrapper{
+  display:flex;
+  justify-content: center;
+  margin: 1em 0;
+}
+.checkout-form-label-text{
+  width:150px;
+  text-align:right;
+  margin-right:0.25em;
+}
+.checkout-form-text-input{
+  font-size:1.2em;
+  padding:0.25em;
+}
+.checkout-form-number-wrapper{
+  display:flex;
+  align-items: center;
+}
+.checkout-form-label-number{
+  white-space: nowrap;
+  margin: 0 0.25em;
+}
+.checkout-form-number-input{
+  font-size:1.2em;
+  padding:0.25em;
+  max-width:34px;
+}
+.expiration-month-label{
+  width:150px;
+  text-align: right;
+}
+.checkout-form-button-wrapper{
+  width:100%;
+  display:flex;
+}
+.checkout-form-button-filler{
+  flex-grow: 1;
+}
+.checkout-form-button{
+  font-size:1.25em;
+  padding:0.5em;
+  background-color:goldenrod;
+  border:2px solid rgb(150, 107, 8);
+  border-radius:0.5em;
+  outline:none;
+  font-weight:bold;
+  margin: 1em 3em;
+}
+
+
+
+.success-wrapper{
+  flex-grow:1;
+  background:white;
+  padding:0 2em;
+}
+.success-header{
+  text-align: center;
+}
+.success-text{
+  text-align: center;
 }

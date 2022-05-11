@@ -31,7 +31,7 @@ export default function Checkout(){
     if(cart.length == 0){
         return (
             <div className="cart-wrapper">
-                <h1>Checkout</h1>
+                <h1 className="checkout-header">Checkout</h1>
                 <div className="cart-empty-text">
                     You have no items in your cart.
                 </div>
@@ -48,23 +48,27 @@ export default function Checkout(){
                     <div className="checkout-bottom-filler"></div>
                     <div className="checkout-subtotal">Subtotal: ${subtotal}</div>
                 </div>
-                <form onSubmit={handleSubmit}>
-                    <div clasName="checkout-form-text-wrapper">
-                        <label clasName="checkout-form-label">Name:</label><input type="text" clasName="checkout-form-name"/>
+                <form onSubmit={handleSubmit} className="checkout-form">
+                    <div className="checkout-form-text-wrapper">
+                        <label className="checkout-form-label-text">Name:</label><input type="text" className="checkout-form-text-input"/>
                     </div>
-                    <div clasName="checkout-form-text-wrapper">
-                        <label clasName="checkout-form-label">Shipping Address:</label><input type="text" clasName="checkout-form-shipping"/>
+                    <div className="checkout-form-text-wrapper">
+                        <label className="checkout-form-label-text">Shipping Address:</label><input type="text" className="checkout-form-text-input"/>
                     </div>
-                    <div clasName="checkout-form-text-wrapper">
-                        <label clasName="checkout-form-label">Billing Address:</label><input type="text" clasName="checkout-form-billing" />
+                    <div className="checkout-form-text-wrapper">
+                        <label className="checkout-form-label-text">Billing Address:</label><input type="text" className="checkout-form-text-input" />
                     </div>
-                    <div clasName="checkout-form-text-wrapper">
-                      <label clasName="checkout-form-label">Card Number:</label><input type="text" clasName="checkout-form-card" />
+                    <div className="checkout-form-text-wrapper">
+                      <label className="checkout-form-label-text">Card Number:</label><input type="text" className="checkout-form-text-input" />
                     </div>
-                    <div clasName="checkout-form-number-wrapper">
-                        <label clasName="checkout-form-label">Experation Month:</label><input type="number" clasName="checkout-form-month" />
-                        <label clasName="checkout-form-label">Experation Year:</label><input type="number" clasName="checkout-form-year" />
-                        <label clasName="checkout-form-label">Pin</label><input type="text" /><input type="text" clasName="checkout-form-pin" />
+                    <div className="checkout-form-number-wrapper">
+                        <label className="checkout-form-label-number expiration-month-label">Exp Month:</label><input type="number" min="1" max="12" className="checkout-form-number-input" />
+                        <label className="checkout-form-label-number">Exp Year:</label><input type="number" className="checkout-form-number-input" />
+                        <label className="checkout-form-label-number">Pin</label><input type="text" className="checkout-form-number-input" />
+                    </div>
+                    <div className="checkout-form-button-wrapper" >
+                        <div className="checkout-form-button-filler"></div>
+                        <button type="submit" className="checkout-form-button">CHECKOUT</button>
                     </div>
                 </form>
             </div>
