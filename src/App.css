@@ -383,6 +383,8 @@ body,html, #root, .App, .content-wrapper{
 .checkout-form-text-input{
   font-size:1.2em;
   padding:0.25em;
+  border:2px solid black;
+  border-radius: 0.25em;
 }
 .checkout-form-number-wrapper{
   display:flex;
@@ -396,6 +398,8 @@ body,html, #root, .App, .content-wrapper{
   font-size:1.2em;
   padding:0.25em;
   max-width:34px;
+  border:2px solid black;
+  border-radius: 0.25em;
 }
 .expiration-month-label{
   width:150px;

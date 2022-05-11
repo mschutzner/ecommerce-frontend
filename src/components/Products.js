@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
 export default function Products(){
     const [products, setProducts] = useState([]);

@@ -25,6 +25,7 @@ export default function Checkout(){
 
     function handleSubmit(e) {
         e.preventDefault();
+        setCart([]);
         navigate("/success");
       }
 
