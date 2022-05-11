@@ -174,7 +174,7 @@ body,html, #root, .App, .content-wrapper{
 .about-wrapper{
   flex-grow:1;
   background:white;
-  padding:0 2em;
+  padding:2em;
 }
 .about-header{
   text-align: center;;
@@ -256,12 +256,16 @@ body,html, #root, .App, .content-wrapper{
   color:goldenrod;
 }
 .product-page-submit{
+  color:black;
   background-color:goldenrod;
   border:2px solid rgb(150, 107, 8);
   border-radius:0.5em;
   outline:none;
   font-weight:700;
   cursor: pointer;
+}
+.product-page-submit:hover{
+  color:black;
 }
 
 .cart-wrapper{
@@ -346,6 +350,9 @@ body,html, #root, .App, .content-wrapper{
   border-radius:0.5em;
   outline:none;
   font-weight:700;
+}
+.cart-checkout-button:hover{
+  color:black;
 }
 
 
@@ -463,6 +470,7 @@ body,html, #root, .App, .content-wrapper{
   flex-grow: 1;
 }
 .checkout-form-button{
+  color:black;
   font-size:1.25em;
   padding:0.5em;
   background-color:goldenrod;
@@ -472,13 +480,16 @@ body,html, #root, .App, .content-wrapper{
   font-weight:700;
   margin: 1em 3em;
 }
+.checkout-form-button:hover{
+  color:black;
+}
 
 
 
 .success-wrapper{
   flex-grow:1;
   background:white;
-  padding:0 2em;
+  padding:2em;
 }
 .success-header{
   text-align: center;
