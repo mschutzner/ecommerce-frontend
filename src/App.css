@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander&family=Open+Sans:wght@400;700&display=swap");
+
 body,html, #root, .App, .content-wrapper{
   min-height:100%;
   display:flex;
@@ -6,6 +8,7 @@ body,html, #root, .App, .content-wrapper{
   box-sizing: border-box;
   margin: 0;
   background-color: #d8d8d8;
+  font-family: "Open Sans", sans-serif;
 }
 .header{
   display: flex;
@@ -27,7 +30,7 @@ body,html, #root, .App, .content-wrapper{
   color:white;
   width:120px;
   text-align: center;
-  font-weight:bold;
+  font-weight:700;
 }
 .logo{
   text-decoration: none;
@@ -35,9 +38,12 @@ body,html, #root, .App, .content-wrapper{
   padding:0.5em 1.5em;
   flex-grow: 1;
   text-align: center;
-  font-weight:bold;
+  font-weight:700;
   text-shadow: 2px 2px 0px goldenrod;
   font-size:1.2em;
+}
+.NavLink:hover, .logo:hover{
+  color:white;
 }
 .search-bar{
   display:inline-block;
@@ -74,9 +80,50 @@ body,html, #root, .App, .content-wrapper{
   cursor: pointer;
 }
 .footer-copyright,.footer-social{
-  font-weight:bold;
+  font-weight:700;
   margin:1em;
 }
+
+
+
+.home-wrapper{
+  flex-grow:1;
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-header{
+  width: fit-content;
+  padding: 0.5em;
+  text-align: center;
+  font-weight:700;
+  background-color:goldenrod;
+  color: #222;
+  font-size:3em;
+  margin: 0.5em 0;
+}
+.home-text{
+  text-indent: 3em;
+  font-size: 1.2em;
+  width: 600px;
+  margin: 0.5em 0;
+}
+.get-started-button{
+  color: black;
+  text-decoration: none;
+  background-color:goldenrod;
+  border:2px solid rgb(150, 107, 8);
+  border-radius:0.5em;
+  font-weight:700;
+  padding: 0.25em;
+  font-size:2em;
+  margin: 1em 0;
+}
+.get-started-button:hover{
+  color: black;
+}
+
 
 
 
@@ -86,6 +133,9 @@ body,html, #root, .App, .content-wrapper{
 .product-link{
   color:inherit;
   text-decoration: none;
+}
+.product-link:hover{
+  color:inherit;
 }
 .product-card-wrapper{
   background-color: white;
@@ -160,7 +210,7 @@ body,html, #root, .App, .content-wrapper{
 .product-page-title{
   display:inline-block;
   font-size: 1.5em;
-  font-weight:bold;
+  font-weight:700;
   color:#333;
 }
 .product-page-details{
@@ -178,7 +228,7 @@ body,html, #root, .App, .content-wrapper{
   border:2px solid rgb(150, 107, 8);
   padding:4px;
   text-transform: capitalize;
-  font-weight:bold;
+  font-weight:700;
 
 }
 .product-page-description{
@@ -191,11 +241,11 @@ body,html, #root, .App, .content-wrapper{
 }
 .product-page-price{
   color:#333;
-  font-weight:bold;
+  font-weight:700;
 }
 .product-page-count{
   width:100%;
-  max-width:40px;
+  max-width:80px;
   outline:1px solid #222;
   border:none;
   padding:0.5em;
@@ -210,7 +260,7 @@ body,html, #root, .App, .content-wrapper{
   border:2px solid rgb(150, 107, 8);
   border-radius:0.5em;
   outline:none;
-  font-weight:bold;
+  font-weight:700;
   cursor: pointer;
 }
 
@@ -224,7 +274,7 @@ body,html, #root, .App, .content-wrapper{
   text-align: center;
   font-size:2em;
   color:#333;
-  font-weight:bold;
+  font-weight:700;
 }
 .cart-empty-text{
   text-align:center;
@@ -257,12 +307,12 @@ body,html, #root, .App, .content-wrapper{
 .cart-item-price{
   font-size:1.5em;
   color:#333;
-  font-weight:bold;
+  font-weight:700;
 }
 .cart-item-count{
   font-size:1.25em;
   width:100%;
-  max-width:40px;
+  max-width:80px;
   outline:1px solid #222;
   border:none;
   padding:0.5em;
@@ -283,7 +333,7 @@ body,html, #root, .App, .content-wrapper{
 .cart-subtotal{
   font-size:1.5em;
   color:#333;
-  font-weight:bold;
+  font-weight:700;
   margin-right:0.5em;
 }
 .cart-checkout-button{
@@ -295,7 +345,7 @@ body,html, #root, .App, .content-wrapper{
   border:2px solid rgb(150, 107, 8);
   border-radius:0.5em;
   outline:none;
-  font-weight:bold;
+  font-weight:700;
 }
 
 
@@ -311,7 +361,7 @@ body,html, #root, .App, .content-wrapper{
   text-align: center;
   font-size:2em;
   color:#333;
-  font-weight:bold;
+  font-weight:700;
 }
 .checkout-empty-text{
   text-align:center;
@@ -335,7 +385,7 @@ body,html, #root, .App, .content-wrapper{
   flex-grow: 1;
 }
 .checkout-item-count{
-  min-width:40px;
+  min-width:80px;
   text-align:center;
   font-size:1.5em;
   padding:0.25em;
@@ -346,7 +396,7 @@ body,html, #root, .App, .content-wrapper{
 .checkout-item-price{
   font-size:1.5em;
   color:#333;
-  font-weight:bold;
+  font-weight:700;
   text-align:right;
   min-width:80px;
 }
@@ -360,7 +410,7 @@ body,html, #root, .App, .content-wrapper{
 .checkout-subtotal{
   font-size:1.5em;
   color:#333;
-  font-weight:bold;
+  font-weight:700;
   margin-right:0.5em;
 }
 .checkout-form{
@@ -419,7 +469,7 @@ body,html, #root, .App, .content-wrapper{
   border:2px solid rgb(150, 107, 8);
   border-radius:0.5em;
   outline:none;
-  font-weight:bold;
+  font-weight:700;
   margin: 1em 3em;
 }
 
