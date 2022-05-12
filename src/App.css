@@ -438,6 +438,7 @@ body,html, #root, .App, .content-wrapper{
   margin-right:0.25em;
 }
 .checkout-form-text-input{
+  width: 350px;
   font-size:1.2em;
   padding:0.25em;
   border:2px solid black;
@@ -454,7 +455,7 @@ body,html, #root, .App, .content-wrapper{
 .checkout-form-number-input{
   font-size:1.2em;
   padding:0.25em;
-  max-width:34px;
+  max-width:80px;
   border:2px solid black;
   border-radius: 0.25em;
 }
